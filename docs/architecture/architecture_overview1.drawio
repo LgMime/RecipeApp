@@ -1,0 +1,43 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.6">
+  <diagram name="Страница — 1" id="iE93WRkzn9gPtQgh5ypG">
+    <mxGraphModel dx="1042" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="CoSUdLMlOt6rgQZcj4Fv-19" value="Концептуальна архітектура CookSmart" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CoSUdLMlOt6rgQZcj4Fv-20" value="FrontEnd&lt;br&gt;MobileApp&lt;div&gt;&lt;br&gt;React Native&lt;/div&gt;&lt;div&gt;&lt;br&gt;WebApp React&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="80" y="540" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="CoSUdLMlOt6rgQZcj4Fv-21" value="BackEnd&lt;br&gt;&lt;br&gt;APIServer&lt;br&gt;Node.Js/Express&lt;div&gt;api/search, api/recipes, api/users, api/favorites&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="410" y="540" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="CoSUdLMlOt6rgQZcj4Fv-22" value="DataBase&lt;div&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;PostgreSQL&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Таблиці:&lt;br&gt;users, recipes, ingredients, favorites, categories&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="780" y="540" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="CoSUdLMlOt6rgQZcj4Fv-23" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CoSUdLMlOt6rgQZcj4Fv-20" target="CoSUdLMlOt6rgQZcj4Fv-21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="700" as="sourcePoint" />
+            <mxPoint x="570" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CoSUdLMlOt6rgQZcj4Fv-24" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="CoSUdLMlOt6rgQZcj4Fv-21" target="CoSUdLMlOt6rgQZcj4Fv-22">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="700" as="sourcePoint" />
+            <mxPoint x="570" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CoSUdLMlOt6rgQZcj4Fv-25" value="Користувачі&lt;br&gt;&lt;br&gt;-Кінцевий користувач&lt;br&gt;&lt;br&gt;&lt;div&gt;-Адміністратор&amp;nbsp;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="90" y="760" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="CoSUdLMlOt6rgQZcj4Fv-26" value="Зовнішні ресури&lt;div&gt;&lt;br&gt;- Emai/SMS&lt;br&gt;&lt;div&gt;-Соціальніц мережі&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="400" y="750" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="CoSUdLMlOt6rgQZcj4Fv-27" value="Інфраструктура&lt;br&gt;&lt;br&gt;-GitHub Actions&lt;br&gt;&lt;div&gt;-Docker&lt;/div&gt;&lt;div&gt;-Monitoring&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="660" y="750" width="130" height="130" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
