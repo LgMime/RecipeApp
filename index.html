@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кулінарна книга (SQL Server)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-utensils"></i>
+                    <span>Кулінарна книга</span>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Пошук рецептів...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="nav-buttons">
+                    <button class="nav-btn active" data-tab="all">Усі рецепти</button>
+                    <button class="nav-btn" data-tab="favorites">Обране</button>
+                    <button class="nav-btn theme-toggle" id="theme-toggle" title="Змінити тему">
+                        <i class="fas fa-moon"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="section-title">
+                <h2>Усі рецепти</h2>
+                <button class="btn" id="create-recipe-btn">
+                    <i class="fas fa-plus"></i> Створити рецепт
+                </button>
+            </div>
+            <div class="recipe-grid" id="recipe-container">
+                </div>
+        </div>
+    </main>
+
+    <div class="modal" id="create-recipe-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Створити новий рецепт</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="recipe-form">
+                    <div class="form-group">
+                        <label for="recipe-title">Назва</label>
+                        <input type="text" id="recipe-title" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipe-description">Опис</label>
+                        <textarea id="recipe-description" class="form-control" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipe-difficulty">Складність</label>
+                        <select id="recipe-difficulty" class="form-control" required>
+                            <option value="easy">Легко</option>
+                            <option value="medium">Середня</option>
+                            <option value="hard">Складно</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Інгредієнти</label>
+                        <div class="ingredient-list" id="ingredient-list">
+                            <div class="ingredient-item">
+                                <input type="text" class="form-control ingredient-input" placeholder="Наприклад: 200г борошна" required>
+                                <button type="button" class="remove-item">&times;</button>
+                            </div>
+                        </div>
+                        <button type="button" class="add-item" id="add-ingredient">
+                            <i class="fas fa-plus"></i> Додати інгредієнт
+                        </button>
+                    </div>
+                    <div class="form-group">
+                        <label>Кроки</label>
+                        <div class="step-list" id="step-list">
+                            <div class="step-item">
+                                <textarea class="form-control step-input" placeholder="Опишіть крок" required></textarea>
+                                <button type="button" class="remove-item">&times;</button>
+                            </div>
+                        </div>
+                        <button type="button" class="add-item" id="add-step">
+                            <i class="fas fa-plus"></i> Додати крок
+                        </button>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipe-image">URL зображення</label>
+                        <input type="text" id="recipe-image" class="form-control" placeholder="https://...">
+                    </div>
+                    <button type="submit" class="btn btn-secondary" style="width: 100%;">Зберегти рецепт</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="recipe-detail-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="detail-title">Назва</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="recipe-detail">
+                    <div class="recipe-detail-image" id="detail-image"></div>
+                    <div class="recipe-detail-content">
+                        <div class="recipe-meta">
+                            <span id="detail-difficulty">Складність: Легко</span>
+                            <button class="favorite-btn" id="detail-favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <p id="detail-description">Опис...</p>
+                        
+                        <h3>Інгредієнти:</h3>
+                        <ul class="ingredients-list" id="detail-ingredients"></ul>
+                        
+                        <h3>Кроки приготування:</h3>
+                        <ol class="steps-list" id="detail-steps"></ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <i class="fas fa-utensils"></i>
+                    <span>Кулінарна книга</span>
+                </div>
+                <p>Працює на ASP.NET Core + SQL Server</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
